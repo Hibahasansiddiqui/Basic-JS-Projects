@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Shopping Cart Demo</title>
+    <title>Shopping Cart</title>
 </head>
 <body>
     <ul data-role="navBar">
@@ -50,6 +50,20 @@
           </tr>
         </table>
         <div><br />
+        <select name="" id="item" >
+            <option value=""> -- Choose item --</option>
+            <option value="p"> Pepsi 1 litre </option>
+            <option value="s"> Sting 500ml </option>
+            <option value="m"> Mineral water 1.5 litre </option>
+            <option value="sj"> Slice Juice bottle 1 litre </option>
+        </select>
+    ​
+        <input type="text" id="quan" placeholder="quantity">
+    ​
+        <button onclick="addItem()"> add cart</button>
+        <button onclick="removeItem()"> remove</button>
+
+        <p id="list"></p>
       
           <h3>Here's What You're Getting!</h3><br />
           <ul class="cartList">

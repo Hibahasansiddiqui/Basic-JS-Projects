@@ -1,27 +1,40 @@
 $('[data-role="price"]').html("$0");
 $('[data-role="subtotal"]').html("$0");
 
-var products = [
-{
-  title: 'Choose One',
-  price: 0.00
-}, 
-{
-  title: 'Blouse',
-  price: 60,
-}, 
-{
-  title: 'Evening Dress',
-  price: 110,
-}, 
-{
-  title: 'Pants',
-  price: 95,
-}, 
-{
-  title: 'Paris Sweatshirt',
-  price: 70,
-}];
+function addItem(){
+  var select = document.querySelector('#item').value;
+  var unit = parseInt( document.querySelector('#quan').value);
+​
+  var pepsi = 150 * unit;
+  var sting = 80 * unit;
+  var mineral = 200 * unit;
+  var slice = 300 * unit;
+​
+if (unit == '' || unit <= 0){
+​
+  alert ('Kindly Insert the Quantity ')
+}
+​
+else if (select === 'p'){
+    console.log(pepsi);
+    document.querySelector('#list').innerHTML = 'Pepsi 1 litre' +  " " +" "+pepsi;
+}
+​
+else if (select === 's'){
+ console.log(sting);
+ document.querySelector('#list').innerHTML = 'Sting 500ml' +  " " +" "+ sting;
+}
+else if (select === 'm'){
+ console.log(mineral);
+ document.querySelector('#list').innerHTML = 'Mineral water 1.5 litre' +  " " +" "+ mineral;
+}  
+​
+else if (select === 'sj'){
+ console.log(slice);
+ document.querySelector('#list').innerHTML = 'Slice Juice bottle 1 litre ' +  " " +" "+ slice;
+}
+​
+}
 
 function populateProductsDdl(selector, items) {
   var options = [];
@@ -30,7 +43,7 @@ function populateProductsDdl(selector, items) {
     var item = items[i];
     options.push($('<option />', {
       text: item.title,
-      value: /*"$" + */ item.price
+      value: "$" + item.price
     }));
   }
   $(selector).html($options);

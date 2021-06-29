@@ -14,39 +14,39 @@
             <div id="calculator">
           
               <form>
-                <p>Amount of your Total Bill?
-                  <p>
-                    PKR. <input id="bill" type="text" placeholder="Bill Amount">
+                <p>Amount of your Total Bill?</p>
+                <p>PKR. <input id="amt" type="text" placeholder="Bill Amount"></p>
                     
-                    <p>How was your service?
-                      <p>
-                    <div class="tipselection">
-                      <option disabled selected value="0">-- Select an Option --</option>
-                      <option value="0.25">25% - Top Notch!</option>
-                      <option value="0.2">20% - You're Generous</option>
-                      <option value="0.15">15% It was OK</option>
-                      <option value="0.1">10% Could be better</option>
-                      <option value="0.05">5% - Below average but appreciated!</option>
-                    </div>
-          
-              </form>
-              <p>How many people are sharing the bill?</p>
-              <input id="peopleamt" type="text" placeholder="Number of People"> people
-              <button type="button" id="calculate">Calculate!</button>
-          
-            </div>
-            <!--calculator end-->
-            <div id="totalTip">
-              <sup>PKR</sup><span id="tip">0.00</span>
-              <small id="each">each</small>
-            </div>
-            <!--totalTip end-->
-          
-          </div>
-          <!--container end-->
-          
-          <script type="text/javascript" src="tipcalculator.js"></script>
-    </body>
+                    <p>How was your service?</p>
+                      <div class="tipselection">
+                        <select id="serv">
+                          <option disabled selected value="0">-- Select an Option --</option>
+                          <option value="O">25% - Top Notch!</option>
+                          <option value="G">20% - You're Generous</option>
+                          <option value="I">15% It was OK</option>
+                          <option value="B">10% Could be better</option>
+                          <option value="T">5% - Below average but appreciated!</option>
+                        </select>
+                      </div>
 
+                  <div>  
+                    <p>How many people are sharing the bill?</p>
+                    <input class="peopleamt" id="peop" type="text" placeholder="Number of People">
+                    <button type="button" id="calculate" onclick="calculateTip()">Calculate!</button>
+                  </div>
+              </form>
+              </div>
+              <!--calculator end-->
+              <div id="totalTip">
+                <div class="align"><span>PKR <div id="ans">0.00</div></span></div>
+                <small id="each">EACH</small>
+                </div>
+                <!--totalTip end-->
+              
+              </div>
+              <!--container end-->
+              
+              <script type="text/javascript" src="script.js"></script>
+        </body>    
 </html>
 
